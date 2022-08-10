@@ -1,6 +1,15 @@
 import streamlit as st
 
-st.header("Aplikasi Perhitungan Sampel Parpol")
+st.set_page_config(page_title="Verifikasi Parpol Calculator", page_icon="📊")
+
+st.markdown("# Verifikasi Parpol Calculator")
+st.sidebar.header("Verifikasi Parpol Calculator")
+st.write(
+    """This demo illustrates a combination of plotting and animation with
+Streamlit. We're generating a bunch of random numbers in a loop for around
+5 seconds. Enjoy!"""
+)
+
 
 chikuadrat = 3.84
 populasi = st.number_input("Masukan Populasi",format="%.0f")
