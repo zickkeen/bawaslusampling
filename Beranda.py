@@ -1,27 +1,27 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Hello",
+    page_title="Beranda",
     page_icon="👋",
 )
 
-st.write("# Welcome to Streamlit! 👋")
+st.write("# Selamat datang! 👋")
 
-st.sidebar.success("Select a demo above.")
 
-chikuadrat = 3.84
-populasi = st.number_input("Masukan Populasi",format="%.0f")
-galatpendugaan = 0.05
-proporsi = 0.5
-sampel = st.button("Hitung Sampel")
-
-if (bool(populasi)):
-    results = (chikuadrat * populasi * proporsi * (1-proporsi)) / ((populasi - 1) * (galatpendugaan**2) + chikuadrat * proporsi *(1-proporsi))
-    st.write("Jumlah Sampel Verifikasi Faktual: ", round(results))
-    interval = populasi / results
-    st.write("dengan interval: ", round(interval))
-    
-elif(populasi == 0):
-  st.write("Populasi Masih kosong")
-else:
-    st.write("Data gagal diproses")
+st.markdown(
+    """
+    Streamlit is an open-source app framework built specifically for
+    Machine Learning and Data Science projects.
+    **👈 Select a demo from the sidebar** to see some examples
+    of what Streamlit can do!
+    ### Want to learn more?
+    - Check out [streamlit.io](https://streamlit.io)
+    - Jump into our [documentation](https://docs.streamlit.io)
+    - Ask a question in our [community
+        forums](https://discuss.streamlit.io)
+    ### See more complex demos
+    - Use a neural net to [analyze the Udacity Self-driving Car Image
+        Dataset](https://github.com/streamlit/demo-self-driving)
+    - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+"""
+)
