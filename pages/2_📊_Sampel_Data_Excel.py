@@ -26,7 +26,7 @@ if modeCari is not None and modeCari == "NAMA":
   if nama is not None and nama != "":
     conn = db.koneksi()
     cur = conn.cursor()
-    cur.execute(f"SELECT * FROM dataDPB where NAMA_PEMILIH LIKE '%{nama}%' AND KECAMATAN='{kec}'")
+    cur.execute(f"SELECT * FROM dataDPB where NAMA_PEMILIH='%{nama}%' AND KECAMATAN='{kec}'")
     hasil = cur.fetchall()
     if len(hasil) > 0:
       st.write("Data ditemukan:")
